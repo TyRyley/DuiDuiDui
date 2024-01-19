@@ -1,0 +1,151 @@
+﻿<Window x:Class="DuiDuiDui.IdentifyingAreas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DuiDuiDui"
+        mc:Ignorable="d"
+        Title="IdentifyingAreas" Height="530" Width="800">
+
+    <!-- set background image -->
+    <Window.Background>
+        <ImageBrush ImageSource="img/background.jpg"/>
+    </Window.Background>
+
+    <Grid Margin="0,0,0,0">
+
+
+        <Border Background="White" CornerRadius="10" Margin="276,30,276,355">
+            <Border Margin="15,15,15,15" BorderBrush="Black" BorderThickness="3">
+                <Image Source="img/identifying_areas_heading.png"/>
+            </Border>
+        </Border>
+
+
+        <ListBox x:Name="lstQuestions" Margin="98,191,482,153">
+
+            <ListBoxItem>1</ListBoxItem>
+            <ListBoxItem>2</ListBoxItem>
+            <ListBoxItem>3</ListBoxItem>
+            <ListBoxItem>4</ListBoxItem>
+            <ListBox.Style>
+                <Style TargetType="ListBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBox">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                                    <ScrollViewer CanContentScroll="True">
+                                        <ItemsPresenter />
+                                    </ScrollViewer>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Style>
+
+        </ListBox>
+        <ListBox x:Name="lstAns" Margin="370,191,210,153">
+
+            <ListBoxItem>1</ListBoxItem>
+            <ListBoxItem>2</ListBoxItem>
+            <ListBoxItem>3</ListBoxItem>
+            <ListBoxItem>4</ListBoxItem>
+            <ListBoxItem>5</ListBoxItem>
+            <ListBoxItem>6</ListBoxItem>
+            <ListBoxItem>7</ListBoxItem>
+
+            <ListBox.Style>
+                <Style TargetType="ListBox">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBox">
+                                <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="5">
+                                    <ScrollViewer CanContentScroll="True">
+                                        <ItemsPresenter />
+                                    </ScrollViewer>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListBox.Style>
+
+        </ListBox>
+
+        <Button x:Name="btnNewGame" FontWeight="ExtraBold" Content="NEW GAME" HorizontalAlignment="Left" Margin="675,304,0,0" VerticalAlignment="Top" Height="42" Width="80" Click="btnNewGame_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <ImageBrush ImageSource="img/white_background.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnUp" FontWeight="ExtraBold" Content="UP" HorizontalAlignment="Left" Margin="370,408,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="btnUp_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <ImageBrush ImageSource="img/white_background.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSubmit" FontWeight="ExtraBold" Content="SUBMIT" HorizontalAlignment="Left" Margin="675,232,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="btnSubmit_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <ImageBrush ImageSource="img/white_background.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnDown" FontWeight="ExtraBold" Content="DOWN" HorizontalAlignment="Left" Margin="510,407,0,0" VerticalAlignment="Top" Height="42" Width="80" Click="btnDown_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <ImageBrush ImageSource="img/white_background.jpg"/>
+            </Button.Background>
+        </Button>
+        
+        <Button x:Name="btnExit" FontWeight="ExtraBold" Content="EXIT" HorizontalAlignment="Left" Margin="675,408,0,0" VerticalAlignment="Top" Height="40" Width="80" Click="btnExit_Click">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="15">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+            <Button.Background>
+                <ImageBrush ImageSource="img/white_background.jpg"/>
+            </Button.Background>
+        </Button>
+
+        <Border CornerRadius="5" Background="White" HorizontalAlignment="Left" Margin="98,408,0,0" VerticalAlignment="Top">
+            <TextBlock x:Name="tbScore" FontWeight="ExtraBold" FontSize="20" TextWrapping="Wrap" Text="Match Columns"/>
+        </Border>
+
+        <Border x:Name="TimerBorder" CornerRadius="5" Background="Red" HorizontalAlignment="Left" Margin="98,120,0,0" VerticalAlignment="Top">
+            <TextBlock x:Name="tbTimer" Foreground="White" FontWeight="ExtraBold" FontSize="20" TextWrapping="Wrap" Text="LET'S GO"/>
+        </Border>
+
+        <Border x:Name="scoreBoardBorder" Background="LightGray" CornerRadius="5" Padding="10" Margin="550,30,27,342">
+            <TextBlock x:Name="tbScoreBoard" FontStyle="Italic" Text="Current session scoreboard:" />
+        </Border>
+        
+    </Grid>
+</Window>
